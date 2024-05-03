@@ -38,3 +38,5 @@ console.log(math.div(2,3))
 
 to read about in website of node js documentation :
 https://nodejs.org/docs/latest/api/
+
+*************** to read file in node js
