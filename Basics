@@ -1,1 +1,40 @@
 
+Node.js® is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.
+
+console.log("Hai dhilipkumar")
+
+let os=require('os');
+let path=require('path');
+console.log(os.type());
+console.log(os.version());
+console.log(os.homedir());
+console.log(path.__filename)
+
+*************** to run type:  node file_name
+
+let math=require('./maths')
+console.log(os.tmpdir())
+console.log(math.add(2,3))
+console.log(math.sub(2,3))
+console.log(math.div(2,3))
+
+***************
+                                                                {
+                                                                PS D:\Node JS> node server
+                                                                Hai dhilipkumar
+                                                                5
+                                                                -1
+                                                                0.6666666666666666
+                                                                PS D:\Node JS> node server
+                                                                Hai dhilipkumar
+                                                                C:\Users\lenovo\AppData\Local\Temp
+                                                                5
+                                                                -1
+                                                                0.6666666666666666
+                                                                PS D:\Node JS> 
+                                                                }
+
+******************
+
+to read about in website of node js documentation :
+https://nodejs.org/docs/latest/api/
