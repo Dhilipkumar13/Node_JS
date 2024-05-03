@@ -40,3 +40,19 @@ to read about in website of node js documentation :
 https://nodejs.org/docs/latest/api/
 
 *************** to read file in node js
+
+let fs=require('fs')
+let path=require('path')
+
+fs.readFile('./read_file/text.txt','utf8',(err,data) => {
+    if(err) throw err;
+    console.log(data);
+});
+
+process.on('uncaughtException',err =>{
+    console.error(`there is error :${err}`)
+    process.exit(1)
+})
+
+*************** to write the new file
+
