@@ -39,12 +39,13 @@ console.log(math.div(2,3))
 to read about in website of node js documentation :
 https://nodejs.org/docs/latest/api/
 
-*************** to read file in node js
+*************************** to read file in node js
 
 let fs=require('fs')
 let path=require('path')
 
-fs.readFile('./read_file/text.txt','utf8',(err,data) => {
+fs.readFile('./read_file/text.txt','utf8',(err,data) => {   =====>>>> its throw error in other os because different os path may be differ insted of this using path   
+                                                *******************************   fs.readFile(path.join(__dirname,'read_file','text.txt'),'utf8',(err,data) => {  **********************************
     if(err) throw err;
     console.log(data);
 });
@@ -54,5 +55,19 @@ process.on('uncaughtException',err =>{
     process.exit(1)
 })
 
-*************** to write the new file
+*************** *********to write the new file
+let fs=require('fs')
+let path=require('path')
 
+let tCse='dhilipkumar from the department so called cse'
+fs.writeFile(path.join(__dirname,'read_file','summa.txt'),tCse,(err)=>{
+    if (err) throw err;
+    console.log('Writ completed....');
+});
+
+process.on('uncaughtException',err =>{
+    console.error(`there is error :${err}`)
+    process.exit(1)
+})
+
+*************************** to add new text to already existing file
