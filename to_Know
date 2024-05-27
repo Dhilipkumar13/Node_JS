@@ -1,3 +1,8 @@
+https://github.com/gitdagray/nodejs_web_server/tree/main/views
+ view the full code
+
+
+
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
