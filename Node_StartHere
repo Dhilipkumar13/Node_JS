@@ -1,5 +1,10 @@
 Node JS:
-  Node js is javascript runtime build on the chrome v8 Javascript engine
+  Node js is javascript runtime environment build on the chrome v8 Javascript engine
 chrome - V8
 firefox - spider monkey
 safari - javascript core
+microsoft - chakra
+
+  *** Node is program that include JavaScript V8 engine with some module that give us capability which is not available in browser ***
+  *** we can access file system, network and some other properties ***
+
