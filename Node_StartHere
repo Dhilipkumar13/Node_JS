@@ -13,11 +13,15 @@ How it works?
   *** node is "asyncronus" which handle multiple request with limited thread ***
   node continuesly monitor Event queue because database prepared query it put notification in event queue then thread pass information to client.
 
-Node modules?
+Important Node modules?
   * http
   * os
   * file
   * event
+  *  path
+  * process
+  * query String
+  * Stream
 
 Global Object?
   * console -> console.log(),console.error()
@@ -36,4 +40,35 @@ Global Object?
    ***  console.log() -->>  global.console.log()
         setTimeout() -->>  global.setTimeout()
 
+  *** most of time we use const for require we dont want to override this variable ***
 
+Important topics to know:
+  NPM
+  Asyncronous Operation
+  CRUD operation
+  Data Validation
+  Authentication and Authorization using json web token
+  Handling and logging Error
+  Unit and Integration Test
+  Test Driven Development
+  Deployment the application in cloud
+
+Modules:
+Path modules  
+    const path = required("path")
+
+    parse()  -> { root:'/',
+                  dir: ,
+                  base: , 
+                  ext: ,
+                  name:   }
+OS modules
+  const os = required("os")
+
+  freemem() -> return total free memory in meachine
+  totalmem() -> return total memory in mechine
+  userInfo() -> return current user
+
+EventEmitter
+  const eventEmitter = required("event")
+  *** this eventEmitter is class not an object like other modules
