@@ -8,3 +8,32 @@ microsoft - chakra
   *** Node is program that include JavaScript V8 engine with some module that give us capability which is not available in browser ***
   *** we can access file system, network and some other properties ***
 
+How it works?
+  node js handle multple request using thread.
+  *** node is "asyncronus" which handle multiple request with limited thread ***
+  node continuesly monitor Event queue because database prepared query it put notification in event queue then thread pass information to client.
+
+Node modules?
+  * http
+  * os
+  * file
+  * event
+
+Global Object?
+  * console -> console.log(),console.error()
+  * setTimeout, setInterval, setImmediate, clearTimeout, clearInterval, clearImmediate
+    setInterval - it is call function in certain interval,
+                  *** it called continously untile clearInterval or windows closed
+  * __dirname
+  * __filename
+
+  "In browser " all function and variable can be access by windows object 
+    basically all fuction while call with prefix window object
+    likely
+    ***  console.log() -->>  window.console.log()
+          setTimeout() -->>  window.setTimeout()
+  "In node " we cannot access variable and function globally
+   ***  console.log() -->>  global.console.log()
+        setTimeout() -->>  global.setTimeout()
+
+
