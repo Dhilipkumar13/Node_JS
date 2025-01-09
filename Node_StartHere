@@ -86,9 +86,39 @@ EventEmitter
 Eventargument
       event argument is by passing the argument to event 
       while we emit the event pass the argument 
+
+      pass multiple value in object
       * event.emit('messageloged',{id:1,url:'https://'})
       * event.on('messageloged',(arg)=>{
           console.log("event Emitted"+arg)
         })
 
+  *** but in above eventargument we only use eventListener in that file only 
+  to overcome this we need extending event emitter
+
+EventEmitter
+     # logger.js
+
+        const EventEmitter = require('event')
+        
+        class Logger extend EventEmitter{
+          log(message){
+        console.log(message)
+        
+        this.emit('messageLogged',{id:1,url:'https://'})
+        }
+        }
+        module.export = Logger ;
+        
+     # app.js
+        
+        const EventEmitter = require('event')
+        
+        const Logger = requied('./logger')
+        const logger = new Logger();      
+        
+        logger.on('messageLogged',(arg)=>{
+          consolr.log('Listened called',arg)
+        })
+        logger.log('message')
     
