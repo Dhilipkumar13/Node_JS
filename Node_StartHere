@@ -70,5 +70,25 @@ OS modules
   userInfo() -> return current user
 
 EventEmitter
-  const eventEmitter = required("event")
-  *** this eventEmitter is class not an object like other modules
+  const EventEmitter = required("event")
+  *** this EventEmitter is class not an object like other modules
+  we need to create object for method to use
+  const event = new EventEmitter();
+  ** Mostly used method in event
+      * event.emit('messageloged')
+      * event.on() or event.eventListener()
+
+        event.on('messageloged',function(){
+          console.log('event emited')
+        })
+        event.emit('eventEmited');
+
+Eventargument
+      event argument is by passing the argument to event 
+      while we emit the event pass the argument 
+      * event.emit('messageloged',{id:1,url:'https://'})
+      * event.on('messageloged',(arg)=>{
+          console.log("event Emitted"+arg)
+        })
+
+    
