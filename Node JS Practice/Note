@@ -1,0 +1,15 @@
+- .env in node project we have .env file where we define our port number
+- process modules is global object for node js that provide information about and control over the current node.js process
+**************
+npm i dotenv package which help to access .env file with help of process modules 
+**********
+          const express = require("express");
+          
+          const app = express();
+          
+     in here app is instance of express application which can be created by using express()
+          use:
+          define routes & respond to request
+          handle middlewar - add functionality of middlewar to process instance before they reach to routes
+          start server - listen & start the server
+
